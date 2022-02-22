@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'KozGoPr6N';
+    src: url('../fonts/KozGoPr6N-Heavy-AlphaNum.woff2') format('woff2'),
+    url('../fonts/KozGoPr6N-Heavy-AlphaNum.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+a {
+    color: black;
+    font-size: small;
+}
+
+p {
+    margin-bottom: 0.25em;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    padding: 0 1em;
+    margin-bottom: 1em;
+    display: flex;
+}
+
+.header > img {
+    height: 70%;
+}
+.v3d {
+    height: 60vh;
+    width: 100%;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    padding: 0.5em 0 ;
+}
+
+.v3d > iframe {
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.part-container {
+    padding: 0;
+}
+
+.part-item {
+    width: 100%;
+    display: flex;
+    padding: 0.5em 0 0.75em 0;
+    flex-direction: column;
+}
+
+.part-item-custom-1 {
+    border-bottom: 2px solid gray;
+}
+
+.part-item-custom-1 .option {
+    margin-bottom: 0.25em;
+}
+
+.part-item-custom-2 {
+    padding-top: 0.5em;
+}
+
+.part-title {
+    width: 100%;
+    text-align: left;
+    background-color: gray;
+    height: fit-content;
+    color: white;
+}
+
+#part-title-1 {
+    border-bottom: 2px solid gray;
+}
+
+.part-design:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+#simple_design > div:first-child {
+    padding: 0 0.5em 0 0;
+    margin-right: 0.5em;
+    border-right: 2px gray solid
+}
+
+.part-title-custom {
+    max-width: 25px;
+}
+
+@media screen and (min-width: 821px) {
+    .part-design:not(:last-child) {
+        padding: 0 0.5em 0 0;
+        margin-right: 0.5em;
+        border-right: 2px gray solid;
+    }
+}
+
+.part-title-custom {
+    font-size: small;
+}
+
+.option {
+    position: relative;
+    height: 50px;
+    padding: 0 0.25em 0.25em 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.option > div {
+    background-size: cover;
+}
+
+.option > div:first-child {
+    height: 100%;
+    width: 100%;
+}
+
+.option > div:not(:first-child)  {
+    position: absolute;
+    height: 50%;
+    top: 0;
+    left: 0;
+    right: 0.25em;
+}
+
+.option.active > div:first-child {
+    border: 2px solid black;
+}
+
+.option.active > div:not(:first-child)  {
+    border: 2px solid black;
+    border-bottom: none;
+}
+
+.option > img {
+    width: 100%;
+    height: 100%;
+}
+
+.option > div > b {
+    position: absolute;
+    text-align: left;
+    font-size: 6px !important;
+    font-weight: bold;
+    font-family: 'KozGoPr6N', Arial, sans-serif;
+}
+
+.option > div:first-child > b {
+    bottom: 1em;
+    left: 0.5em;
+    right: 0.5em;
+}
+
+.option > div:not(:first-child) > b {
+    top: 1em;
+    left: 0.5em;
+    right: 0.5em;
+}
+
+.option:hover {
+    cursor: pointer;
+}
+
+#print_pdf > img {
+    height: 40px;
+}
+
+#print_pdf > img:hover {
+    cursor: pointer;
+}
+
+.scroll {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    display: none;
+    align-items: center;
+}
+
+.scroll > img {
+    width: 100%;
+}
+
+.scroll.left {
+    left: -15px;
+}
+
+.scroll.right {
+    right: -15px;
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 820px)  {
+    .header {
+        height: 50px;
+    }
+
+    .header > img {
+        height: 50%;
+    }
+
+    .part-item {
+        flex-direction: column;
+    }
+
+    .part-title-custom {
+        width: 15px;
+    }
+
+    .part-title-custom {
+        font-size: xx-small;
+    }
+
+    .scroll.right {
+        display: flex;
+    }
+
+    .note {
+        margin-top: 1em;
+        font-size: x-small;
+    }
+
+    #part-item-custom {
+        overflow: auto;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+
+
+
+

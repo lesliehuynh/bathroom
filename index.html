@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name = ”robots” content = ”noindex” />
+    <title>LIXIL - BATHROOM</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/options.css">
+</head>
+<body>
+<div class="container d-flex flex-column">
+    <div id="header" class="flex-row align-items-center justify-content-between header">
+        <img class="logo-img" src="./assets/images/h_logo.svg" alt="logo">
+        <img class="title-img" src="./assets/images/title.png" alt="title">
+    </div>
+    <div class="v3d d-flex justify-content-center">
+        <iframe src="model/System_Bathrom_AX.html"
+                style="width: 100%; height: 100%; border: none">
+        </iframe>
+    </div>
+    <div class="controller-container d-flex flex-column">
+        <div class="controller-title pt-1">
+            <p class="mb-0">カラーを変えてみよう!</p>
+        </div>
+        <div class="part-container">
+            <div class="part-item flex-column" style="position: relative">
+                <div class="part-title col-12 mb-2">
+                    <b>壁</b>
+                </div>
+                <div class="d-flex flex-row w-100">
+                    <div class="d-flex flex-column">
+                        <div  id="part-title-1" class="d-flex align-items-end part-title-custom">
+                            <b class="pb-1">全面張り</b>
+                        </div>
+
+                        <b class="pt-2 part-title-custom">アクセント張り</b>
+                    </div>
+                    <div id="part-item-custom" class="col d-flex flex-row p-0">
+                        <div id="natural_design" class="col-12 col-lg-4 part-design">
+                            <div class="d-flex flex-wrap part-item-custom-1">
+                                <p class="w-100">
+                                    <b>Natural </b>
+                                    DESIGN
+                                </p>
+                                <div  id="first_option" class="option wall col-3" data-value="hn662" data-name="ウォールナット">
+                                    <div class="hn662">
+                                        <b>ウォールナット</b>
+                                    </div>
+                                </div>
+                                <div class="option wall col-3" data-value="hn661" data-name="チェリー">
+                                    <div class="hn661">
+                                        <b>チェリー</b>
+                                    </div>
+                                </div>
+                                <div class="option wall col-3" data-value="ht541" data-name="ランダムウッド">
+                                    <div class="ht541">
+                                        <b>ランダムウッド</b>
+                                    </div>
+                                </div>
+                                <div class="option wall col-3" data-value="hn642" data-name="ウッドグレインライト">
+                                    <div class="hn642">
+                                        <b>ウッドグレインライト</b>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-wrap part-item-custom-2">
+                                <div class="option wall col-3" data-value="hn662,le301" data-name="ウォールナット,ウッドグレインライト">
+                                    <div class="hn662">
+                                        <b>ウォールナット</b>
+                                    </div>
+                                    <div class="le301">
+                                        <b>マットホワイト</b>
+                                    </div>
+
+                                </div>
+                                <div class="option wall col-3" data-value="hn661,le301" data-name="チェリー,ウッドグレインライト">
+                                    <div class="hn661">
+                                        <b>チェリー</b>
+                                    </div>
+                                    <div class="le301">
+                                        <b>マットホワイト</b>
+                                    </div>
+                                </div>
+                                <div class="option wall col-3" data-value="ht541,le301" data-name="ランダムウッド,ウッドグレインライト">
+                                    <div class="ht541">
+                                        <b>ランダムウッド</b>
+                                    </div>
+                                    <div class="le301">
+                                        <b>マットホワイト</b>
+                                    </div>
+                                </div>
+                                <div class="option wall col-3" data-value="hn642,le301" data-name="ウッドグレインライト,ウッドグレインライト">
+                                    <div class="hn642">
+                                        <b>ウッドグレインライト</b>
+                                    </div>
+                                    <div class="le301">
+                                        <b>マットホワイト</b>
+                                    </div>
+                                </div>
+                                <div class="option wall col-3" data-value="hn662,ht611" data-name="ウォールナット,シルバーグレー">
+                                    <div class="hn662"><b>ウォールナット</b></div>
+                                    <div class="ht611"><b>シルバーグレー</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="hn661,ht611" data-name="チェリー,シルバーグレー">
+                                    <div class="hn661">
+                                        <b>チェリー</b>
+                                    </div>
+                                    <div class="ht611">
+                                        <b>シルバーグレー</b>
+                                    </div>
+                                </div>
+                                <div class="option wall col-3" data-value="ht541,ht611" data-name="ランダムウッド,シルバーグレー">
+                                    <div class="ht541"><b>ランダムウッド</b></div>
+                                    <div class="ht611"><b>シルバーグレー</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="hn642,ht611" data-name="ウッドグレインライト,シルバーグレー">
+                                    <div class="hn642"><b>ウッドグレインライト</b></div>
+                                    <div class="ht611"><b>シルバーグレー</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="hn662,ht614" data-name="ウォールナット,モルティオダーク">
+                                    <div class="hn662"><b>ウォールナット</b></div>
+                                    <div class="ht614"><b>モルティオダーク</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="hn661,ht614" data-name="チェリー,モルティオダーク">
+                                    <div class="hn661"><b>チェリー</b></div>
+                                    <div class="ht614"><b>モルティオダーク</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="ht541,ht614" data-name="ランダムウッド,モルティオダーク">
+                                    <div class="ht541"><b>ランダムウッド</b></div>
+                                    <div class="ht614"><b>モルティオダーク</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="hn642,ht614" data-name="ウッドグレインライト,モルティオダーク">
+                                    <div class="hn642"><b>ウッドグレインライト</b></div>
+                                    <div class="ht614"><b>モルティオダーク</b></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="individual_design" class="col-12 col-lg-4 part-design">
+                            <div class="d-flex flex-wrap part-item-custom-1">
+                                <p class="w-100">
+                                    <b>Individual </b>
+                                    DESIGN
+                                </p>
+                                <div class="option wall col-3" data-value="ht985" data-name="ヘイジーシルバー">
+                                    <div class="ht985 ">
+                                        <b>ヘイジーシルバー</b>
+                                    </div>
+                                </div>
+                                <div class="option wall col-3" data-value="ht612" data-name="ステインブルー">
+                                    <div class="ht612 "><b>ステインブルー</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="ht614" data-name="モルティオダーク">
+                                    <div class="ht614 "><b>モルティオダーク</b></div>
+                                </div>
+                                <div class="option wall"></div>
+                            </div>
+                            <div class="d-flex flex-wrap part-item-custom-2">
+                                <div class="option wall col-3" data-value="ht985,le301" data-name="ヘイジーシルバー,ウッドグレインライト">
+                                    <div class="ht985 "><b>ヘイジーシルバー</b></div>
+                                    <div class="le301"><b>マットホワイト</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="ht612,le301" data-name="ステインブルー,ウッドグレインライト">
+                                    <div class="ht612 "><b>ステインブルー</b></div>
+                                    <div class="le301"><b>マットホワイト</b></div>
+                                </div>
+                                <div class="option active wall col-3" data-value="ht614,le301"
+                                     data-name="モルティオダーク,ウッドグレインライト">
+                                    <div class="ht614 "><b>モルティオダーク</b></div>
+                                    <div class="le301"><b>マットホワイト</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="hn986,ht614" data-name="クルムホワイト,モルティオダーク">
+                                    <div class="hn986"><b>クルムホワイト</b></div>
+                                    <div class="ht614 "><b>モルティオダーク</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="ht985,ht611" data-name="ヘイジーシルバー,シルバーグレー">
+                                    <div class="ht985 "><b>ヘイジーシルバー</b></div>
+                                    <div class="ht611"><b>シルバーグレー</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="ht612,ht611" data-name="ステインブルー,シルバーグレー">
+                                    <div class="ht612 "><b>ステインブルー</b></div>
+                                    <div class="ht611"><b>シルバーグレー</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="ht614,ht611" data-name="モルティオダーク,シルバーグレー">
+                                    <div class="ht614 "><b>モルティオダーク</b></div>
+                                    <div class="ht611"><b>シルバーグレー</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="hn987,ht614" data-name="ストーンシェルグレー,モルティオダーク">
+                                    <div class="hn987"><b>ストーンシェルグレー</b></div>
+                                    <div class="ht614 "><b>モルティオダーク</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="ht985,ht614" data-name="ヘイジーシルバー,モルティオダーク">
+                                    <div class="ht985 "><b>ヘイジーシルバー</b></div>
+                                    <div class="ht614 "><b>モルティオダーク</b></div>
+                                </div>
+                                <div class="option wall col-3" data-value="ht614,ht612" data-name="モルティオダーク,ステインブルー">
+                                    <div class="ht614 "><b>モルティオダーク</b></div>
+                                    <div class="ht612 "><b>ステインブルー</b></div>
+                                </div>
+                                <div class="option wall col-3"></div>
+                                <div class="option wall col-3" data-value="ht611,ht614" data-name="シルバーグレー,モルティオダーク">
+                                    <div class="ht611"><b>シルバーグレー</b></div>
+                                    <div class="ht614 "><b>モルティオダーク</b></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="simple_design" class="col-12 col-lg part-design d-flex flex-row p-0">
+                             <div class="col">
+                                 <div class="d-flex flex-wrap part-item-custom-1">
+                                     <p class="w-100">
+                                         <b>Simple </b>
+                                         DESIGN
+                                     </p>
+                                     <div class="option wall col-4" data-value="hn986" data-name="クルムホワイト">
+                                         <div class="hn986">
+                                             <b>クルムホワイト</b>
+                                         </div>
+                                     </div>
+                                     <div class="option wall col-4" data-value="hn987" data-name="ストーンシェルグレー">
+                                         <div class="hn987">
+                                             <b>ストーンシェルグレー</b>
+                                         </div>
+                                     </div>
+                                     <div class="option wall col-4" data-value="ht611" data-name="シルバーグレー">
+                                         <div class="ht611">
+                                             <b>シルバーグレー</b>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="d-flex flex-wrap part-item-custom-2">
+                                     <div class="option wall col-4" data-value="hn986,le301" data-name="クルムホワイト,ウッドグレインライト">
+                                         <div class="hn986">
+                                             <b>クルムホワイト</b>
+                                         </div>
+                                         <div class="le301"><b>マットホワイト</b></div>
+                                     </div>
+                                     <div class="option wall col-4" data-value="hn987,le301" data-name="ストーンシェルグレー,ウッドグレインライト">
+                                         <div class="hn987">
+                                             <b>ストーンシェルグレー</b>
+                                         </div>
+                                         <div class="le301">
+                                             <b>マットホワイト</b>
+                                         </div>
+                                     </div>
+                                     <div class="option wall col-4" data-value="ht611,le301" data-name="シルバーグレー,ウッドグレインライト">
+                                         <div class="ht611">
+                                             <b>シルバーグレー</b>
+                                         </div>
+                                         <div class="le301">
+                                             <b>マットホワイト</b>
+                                         </div>
+                                     </div>
+                                     <div class="option wall col-4" data-value="hn986,ht611" data-name="クルムホワイト,シルバーグレー">
+                                         <div class="hn986">
+                                             <b>クルムホワイト</b>
+                                         </div>
+                                         <div class="ht611">
+                                             <b>シルバーグレー</b>
+                                         </div>
+                                     </div>
+                                     <div class="option wall col-4" data-value="hn987,ht611" data-name="ストーンシェルグレー,シルバーグレー">
+                                         <div class="hn987">
+                                             <b>ストーンシェルグレー</b>
+                                         </div>
+                                         <div class="ht611">
+                                             <b>シルバーグレー</b>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                            <div id="single_design" class="col-3 p-0">
+                                <div class="d-flex flex-wrap part-item-custom-1">
+                                    <p class="w-100">
+                                        標準色
+                                    </p>
+                                    <div class="option wall col" data-value="le301" data-name="ウッドグレインライト">
+                                        <div class="le301">
+                                            <b>マットホワイト</b>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="scroll_left" class="scroll left">
+                    <img src="./assets/images/triangle.svg" alt="">
+                </div>
+                <div id="scroll_right" class="scroll right">
+                    <img src="./assets/images/triangle.svg" alt="">
+                </div>
+            </div>
+            <div class="part-item">
+                <div class="part-title col-12 mb-2">
+                    <b>浴槽</b>
+                </div>
+                <div class="d-flex flex-wrap col-sm-11 col-12">
+                    <div class="option active bath" data-value="#E2E5E2" data-name="ホワイト">
+                        <div class="bath-3">
+                            <b>ホワイト</b>
+                        </div>
+                    </div>
+                    <div class="option bath" data-value="#D8DACB" data-name="ベージュ">
+                        <div class="bath-6">
+                            <b>ベージュ</b>
+                        </div>
+                    </div>
+                    <div class="option bath" data-value="#C8CDCA" data-name="グレー">
+                        <div class="bath-5">
+                            <b>グレー</b>
+                        </div>
+                    </div>
+                    <div class="option bath" data-value="#232726" data-name="ブラック">
+                        <div class="bath-4">
+                            <b>ブラック</b>
+                        </div>
+                    </div>
+                    <div class="note ml-3">
+                        <p>※グレーとブラックはルフレトーンまたはパールクォーツのみです。</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="part-item">
+                <div class="part-title col-12 mb-2">
+                    <b>カウンター</b>
+                </div>
+                <div class="d-flex flex-wrap col-sm-11 col-12">
+                    <div class="option active shelf" data-value="#FFFFFF" data-name="ホワイト">
+                        <div class="shelf-1">
+                            <b>ホワイト</b>
+                        </div>
+                    </div>
+                    <div class="option shelf" data-value="#403e3e" data-name="ブラック">
+                        <div class="shelf-2">
+                            <b>ブラック</b>
+                        </div>
+                    </div>
+                    <div class="option shelf" data-value="#a6a6a6" data-name="ライトグレー">
+                        <div class="shelf-3">
+                            <b>ライトグレー</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part-item">
+                <div class="part-title col-12 mb-2">
+                    <b>床</b>
+                </div>
+                <div class="d-flex flex-wrap col-sm-11 col-12">
+                    <div class="option floor" data-value="#CACED0" data-name="ホワイト">
+                        <div class="f_1">
+                            <b>ホワイト</b>
+                        </div>
+                    </div>
+                    <div class="option floor" data-value="#CBC3AC" data-name="ベージュ">
+                        <div class="f_2">
+                            <b>ベージュ</b>
+                        </div>
+                    </div>
+                    <div class="option floor" data-value="#A7ACB4" data-name="グレー">
+                        <div class="f_3">
+                            <b>グレー</b>
+                        </div>
+                    </div>
+                    <div class="option active floor" data-value="#FFFFFF" data-name="グラニットライトグレー">
+                        <div class="f_4">
+                            <b>グラニットライトグレー</b>
+                        </div>
+                    </div>
+                    <div class="option floor" data-value="#D2C0B0" data-name="グラニットライトブラウン">
+                        <div class="f_5">
+                            <b>グラニットライトブラウン</b>
+                        </div>
+                    </div>
+                    <div class="option floor" data-value="#89898D" data-name="グラニットグレー">
+                        <div class="f_6">
+                            <b>グラニットグレー</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="part-container p-2" style="border-bottom: 2px gray solid">
+            <div id="print_pdf">
+                <img src="./assets/images/btn_print.png" alt="Print">
+            </div>
+        </div>
+        <div class="part-container d-flex flex-column p-3">
+            <div class="d-flex flex-row mb-3">
+                <div style="text-decoration: underline;">
+                    <a href=""><b>プライバシーポリシー</b></a>
+                    <a class="ml-5" href=""><b>サイト利用条件</b></a>
+                </div>
+            </div>
+            <i class="mb-1" style="font-size: x-small">Copyright (C) LIXIL Corporation. All right reserved</i>
+        </div>
+    </div>
+</div>
+<script src="assets/scripts/main.js"></script>
+</body>
+</html>
