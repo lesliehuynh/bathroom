@@ -7,6 +7,19 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'KozGoPr6N';
+    src: url('../fonts/KozGoPr6N-Heavy-AlphaNum.eot');
+    src: url('../fonts/KozGoPr6N-Heavy-AlphaNum.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/KozGoPr6N-Heavy-AlphaNum.woff2') format('woff2'),
+    url('../fonts/KozGoPr6N-Heavy-AlphaNum.woff') format('woff'),
+    url('../fonts/KozGoPr6N-Heavy-AlphaNum.svg#KozGoPr6N-Heavy-AlphaNum') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 a {
     color: black;
     font-size: small;
@@ -27,6 +40,7 @@ p {
 .header > img {
     height: 70%;
 }
+
 .v3d {
     height: 60vh;
     width: 100%;
@@ -89,14 +103,6 @@ p {
 
 .part-title-custom {
     max-width: 25px;
-}
-
-@media screen and (min-width: 821px) {
-    .part-design:not(:last-child) {
-        padding: 0 0.5em 0 0;
-        margin-right: 0.5em;
-        border-right: 2px gray solid;
-    }
 }
 
 .part-title-custom {
@@ -179,7 +185,7 @@ p {
     top: 0;
     bottom: 0;
     width: 10px;
-    display: none;
+    display: flex;
     align-items: center;
 }
 
@@ -189,11 +195,23 @@ p {
 
 .scroll.left {
     left: -15px;
+    display: none;
 }
 
 .scroll.right {
     right: -15px;
     transform: rotate(180deg);
+}
+
+@media screen and (min-width: 1200px) {
+    .part-design:not(:last-child) {
+        padding: 0 0.5em 0 0;
+        margin-right: 0.5em;
+        border-right: 2px gray solid;
+    }
+    .scroll {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 820px)  {
@@ -215,10 +233,6 @@ p {
 
     .part-title-custom {
         font-size: xx-small;
-    }
-
-    .scroll.right {
-        display: flex;
     }
 
     .note {
