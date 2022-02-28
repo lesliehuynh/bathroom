@@ -19,6 +19,11 @@
     font-display: swap;
 }
 
+* {
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+}
+
 
 a {
     color: black;
@@ -105,6 +110,10 @@ p {
     max-width: 25px;
 }
 
+.option-container {
+    padding-left: 25px;
+}
+
 .part-title-custom {
     font-size: small;
 }
@@ -148,12 +157,20 @@ p {
     height: 100%;
 }
 
+.option > div > svg {
+    position: absolute;
+    left: 5px;
+    bottom: 8px;
+    height: 9px;
+}
+
+
 .option > div > b {
     position: absolute;
     text-align: left;
     font-size: 6px !important;
     font-weight: bold;
-    font-family: 'KozGoPr6N', Arial, sans-serif;
+    font-family: 'KozGoPr6N', Helvetica, sans-serif;
 }
 
 .option > div:first-child > b {
@@ -205,8 +222,8 @@ p {
 
 @media screen and (min-width: 1200px) {
     .part-design:not(:last-child) {
-        padding: 0 0.5em 0 0;
-        margin-right: 0.5em;
+        padding: 0 0.25em 0 0;
+        margin-right: 0.25em;
         border-right: 2px gray solid;
     }
     .scroll {
@@ -231,6 +248,10 @@ p {
         width: 15px;
     }
 
+    .option-container {
+        padding-left: 15px;
+    }
+
     .part-title-custom {
         font-size: xx-small;
     }
@@ -247,7 +268,34 @@ p {
 
 @media (min-width: 1400px) {
     .container {
-        max-width: 1320px;
+        max-width: 1400px;
+    }
+    .option > div > svg {
+        height: 8px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .option > div > svg {
+        height: 6px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .option > div > svg {
+        height: 6px !important;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .option > div > svg {
+        height: 5px !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .option > div > svg {
+        height: 8px;
     }
 }
 
