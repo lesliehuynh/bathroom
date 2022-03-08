@@ -1,14 +1,40 @@
 $(function () {
-    let optionWidth = $('#first_option').width();
-    $('.bath').width(optionWidth);
-    $('.shelf').width(optionWidth);
-    $('.floor').width(optionWidth);
-    let titleHeight = $($('.part-item-custom-1')[0]).height();
-    $('#part-title-1').height(titleHeight);
-
-    let itemWidth = $('#natural_design').width();
 
     let firstClick = true;
+
+    let optionWidth, itemWidth, lastScrollLeft = 0;
+
+    const scrollRight = $('#scroll_right');
+
+    const scrollLeft = $('#scroll_left');
+
+    const srcDir = './assets/images/';
+
+    if (window.innerWidth < 576) {
+        $('.init').removeClass('init').off('click');
+
+        $('.controller-container').removeClass('d-none').addClass('d-flex');
+
+        $('footer').removeClass('d-none').addClass('d-flex');
+
+        initUI()
+    } else {
+        $('.init').on('click', function () {
+            $(this).removeClass('init').off('click');
+
+            $('.controller-container').removeClass('d-none').addClass('d-flex');
+
+            $('footer').removeClass('d-none').addClass('d-flex');
+
+            initUI();
+        })
+    }
+
+    $(window).resize(() => {
+        optionWidth = $('#first_option').width();
+        $('.option').width(optionWidth);
+        itemWidth = $('#natural_design').width();
+    })
 
     $('.option').each((index, el) => {
         const whiteText = ['ヘイジーシルバー', 'ステインブルー', 'モルティオダーク', 'ブラック', 'グラニットグレー']
@@ -30,20 +56,19 @@ $(function () {
             $('#header').hide();
             firstClick = false;
         }
+    });
+
+    $('.wall').on('click', function () {
+        const value = $(this).data('value').split(',');
+        $('#front_wall').attr('src', srcDir + 'front-wall/' + value[0] + '.png');
+        if (value.length > 1) {
+            $('#side_wall').attr('src', srcDir + 'side-wall/' + value[1] + '.png');
+        } else {
+            $('#side_wall').attr('src', srcDir + 'side-wall/' + value[0] + '.png');
+        }
+        $('.wall').removeClass('active');
+        $(this).addClass('active');
     })
-
-    $(window).resize(() => {
-        let optionWidth = $('#first_option').width();
-        $('.option').width(optionWidth);
-        itemWidth = $('#natural_design').width();
-    })
-
-    const scrollRight = $('#scroll_right');
-
-    const scrollLeft = $('#scroll_left');
-
-    let lastScrollLeft = 0;
-
 
     $('#part-item-custom').scroll(function () {
         let st = $(this).scrollLeft();
@@ -73,6 +98,34 @@ $(function () {
             }
         })
     });
+
+    function initUI() {
+            optionWidth = $('#first_option').width();
+
+            itemWidth = $('#natural_design').width();
+
+            $('.bath').width(optionWidth).on('click', function () {
+                const value = $(this).data('value');
+                $('#bath_img').attr('src', srcDir + 'bath/' + value + '.png');
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+
+            $('.shelf').width(optionWidth).on('click', function () {
+                const value = $(this).data('value');
+                $('#shelf_img').attr('src', srcDir + 'shelf/' + value + '.png');
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+
+            $('.floor').width(optionWidth).on('click', function () {
+                const value = $(this).data('value');
+                $('#floor_img').attr('src', srcDir + 'floor/' + value + '.png');
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+
+            let titleHeight = $($('.part-item-custom-1')[0]).height();
+
+            $('#part-title-1').height(titleHeight);
+    }
 
     function getSVG(val, isBlack = true) {
         return `<svg viewBox="0 0 230 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <tab name="init" type="InitTab" active="false" scrollx="902.7039184570312" scrolly="506.77191162109386" scale="0.9">
+  <tab name="init" type="InitTab" active="false" scrollx="964.1883544921875" scrolly="540.2621459960938" scale="1">
     <block xmlns="https://developers.google.com/blockly/xml" type="initSettings" id="MZKiUYaP?,Ajd;Ce`z9$" x="-910" y="-490">
       <field name="LOAD_COMP_ASSETS">TRUE</field>
       <field name="FULLSCREEN">TRUE</field>
@@ -7,8 +7,58 @@
       <field name="PRESERVE_DRAW_BUF">TRUE</field>
       <field name="FADE_ANNOTATIONS">TRUE</field>
     </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="initPreloader" id="=*LzSb%ydu|Ee{1h@SK6" x="-390" y="-370">
+      <statement name="DO_PROGRESS">
+        <block type="setHTMLElemStyle" id="l@ksz:HFe(@Is-bU])u(">
+          <field name="PROPERTY">opacity</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text_join" id="kK([:-tGh`22yF.QDtj9">
+              <mutation items="1"/>
+              <value name="ADD0">
+                <block type="math_arithmetic" id="8%pmSL:Rth!,e2C;C|+d">
+                  <field name="OP">DIVIDE</field>
+                  <value name="A">
+                    <shadow type="math_number" id="|cT/dJq0VLX^A7AGG:P-">
+                      <field name="NUM">2</field>
+                    </shadow>
+                    <block type="percentage" id="kOBo4Vir5i55Ve+ROX7/"/>
+                  </value>
+                  <value name="B">
+                    <shadow type="math_number" id="c=UXHXYpe^1*4C/Nv:i]">
+                      <field name="NUM">100</field>
+                    </shadow>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </value>
+          <value name="ID">
+            <shadow type="text" id="90||kXX~[cO2`yRnF:;_">
+              <field name="TEXT">preload_img</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <statement name="DO_END">
+        <block type="setHTMLElemStyle" id="c[@rJz;6j;d_`,3JM-m8">
+          <field name="PROPERTY">display</field>
+          <field name="PARENT">FALSE</field>
+          <value name="VALUE">
+            <block type="text" id="xs=BIRCO;2gP5X#F+h:p">
+              <field name="TEXT">none</field>
+            </block>
+          </value>
+          <value name="ID">
+            <shadow type="text" id="oVe|Sex9p7L?F$c#M84Q">
+              <field name="TEXT">preload</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+    </block>
   </tab>
-  <tab name="main" type="MainTab" active="true" scrollx="-158.77373504638672" scrolly="452.528564453125" scale="1">
+  <tab name="main" type="MainTab" active="true" scrollx="1069.697532026441" scrolly="350.30422576721867" scale="0.5881125215778855">
     <variables xmlns="https://developers.google.com/blockly/xml">
       <variable id="K5xDt%|StBJ};G(jkJkN" type="">val</variable>
       <variable id="s{[x0qWL)!UT:6a_Yk/t" type="">initPosition</variable>
