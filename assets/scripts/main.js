@@ -60,7 +60,7 @@ $(function () {
 
     $('.wall').on('click', function () {
         const value = $(this).data('value').replace(',', '-');
-        $('#wall_img').attr('src', srcDir + 'front-wall/' + value.r + '.png');
+        $('#wall_img').attr('src', srcDir + 'wall/' + value + '.png');
         $('.wall').removeClass('active');
         $(this).addClass('active');
     })
