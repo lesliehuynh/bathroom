@@ -59,13 +59,8 @@ $(function () {
     });
 
     $('.wall').on('click', function () {
-        const value = $(this).data('value').split(',');
-        $('#front_wall').attr('src', srcDir + 'front-wall/' + value[0] + '.png');
-        if (value.length > 1) {
-            $('#side_wall').attr('src', srcDir + 'side-wall/' + value[1] + '.png');
-        } else {
-            $('#side_wall').attr('src', srcDir + 'side-wall/' + value[0] + '.png');
-        }
+        const value = $(this).data('value').replace(',', '-');
+        $('#wall_img').attr('src', srcDir + 'front-wall/' + value.r + '.png');
         $('.wall').removeClass('active');
         $(this).addClass('active');
     })
@@ -128,7 +123,7 @@ $(function () {
     }
 
     function getSVG(val, isBlack = true) {
-        return `<svg viewBox="0 0 230 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        return `<svg viewBox="0 0 230 18" xmlns="http://www.w3.org/2000/svg" ">
                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="KozGoPr6N, Helvetica, sans-serif" font-size="19" font-weight="500">
                     <text fill="${isBlack ? '#000000' : '#FFFFFF'}">
                         <tspan x="-2" y="16">${val}</tspan>
