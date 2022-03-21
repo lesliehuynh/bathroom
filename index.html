@@ -18,14 +18,15 @@
         <img class="logo-img" src="./assets/images/h_logo.png" alt="logo">
         <img class="title-img" src="./assets/images/title.svg" alt="title">
     </header>
-    <div class="content-block d-flex justify-content-center init">
+    <div class="content-block d-flex justify-content-center flex-column align-items-center init">
         <div class="composite-block">
-            <img id="wall_img" src="assets/images/wall/ht614.png" alt="" style="z-index: 1">
+            <img id="wall_img" src="assets/images/wall/hn662-le301.png" alt="" style="z-index: 1">
             <img id="floor_img" src="./assets/images/floor/n86.png" alt="" style="z-index: 2">
             <img id="shelf_img" src="./assets/images/shelf/fw1.png" alt="" style="z-index: 2">
             <img id="bath_img" src="./assets/images/bath/w92.png" alt="" style="z-index: 2">
         </div>
     </div>
+    <p id="init_text" class="mt-1">カラーを変えてみよう!</p>
     <div class="controller-container d-none flex-column">
         <div class="controller-title pt-1">
             <p class="mb-0">カラーを変えてみよう!</p>
@@ -78,7 +79,7 @@
                                 </div>
                             </div>
                             <div class="d-flex flex-wrap part-item-custom-2">
-                                <div class="option wall col-3" data-value="hn662,le301" data-name="ウォールナット,マットホワイト">
+                                <div class="option wall col-3 active" data-value="hn662,le301" data-name="ウォールナット,マットホワイト">
                                     <div class="hn662">
                                     </div>
                                     <div class="le301">
@@ -170,7 +171,7 @@
                                     <div class="ht612 "></div>
                                     <div class="le301"></div>
                                 </div>
-                                <div class="option active wall col-3" data-value="ht614,le301"
+                                <div class="option wall col-3" data-value="ht614,le301"
                                      data-name="モルティオダーク,マットホワイト">
                                     <div class="ht614 "></div>
                                     <div class="le301"></div>
@@ -413,5 +414,8 @@
     </footer>
 </div>
 <script src="assets/scripts/main.js"></script>
+<script src="assets/scripts/jspdf.umd.min.js"></script>
+<script src="assets/scripts/printPDF.js"></script>
+<script src="assets/fonts/jpFont.js"></script>
 </body>
 </html>

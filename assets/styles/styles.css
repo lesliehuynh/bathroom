@@ -85,17 +85,13 @@ p {
     transition: all 1s;
 }
 
-.content-block.init {
-    border: none;
-}
-
 .content-block.init:hover {
     cursor: pointer;
 }
 
 .content-block.init > .composite-block {
-    width: calc(100vh - 75px);
-    height: calc(100vh - 75px);
+    width: calc(100vh - 120px);
+    height: calc(100vh - 120px);
 }
 
 .content-block > .composite-block > img {
@@ -352,6 +348,10 @@ p {
     .content-block > .composite-block {
         width: 95vw;
         height: 95vw;
+    }
+
+    #init_text {
+        display: none;
     }
 }
 

@@ -20,8 +20,14 @@ async function generatePdf(img, frontWall, sideWall, bath, shelf, floor) {
 
     const date = new Date()
 
-    const headerImg = await addImageProcess('../assets/images/header-pdf.png')
-    const logoImg = await addImageProcess('../assets/images/h_logo.png')
+    const href = window.location.href;
+
+    const headerImg = await addImageProcess(href + '/assets/images/header-pdf.png');
+    const logoImg = await addImageProcess(href + '/assets/images/h_logo.png');
+    const wallImg = await addImageProcess(href + '/' + img.wall);
+    const bathImg = await addImageProcess(href + '/' + img.bath);
+    const shelfImg = await addImageProcess(href + '/' + img.shelf);
+    const floorImg = await addImageProcess(href + '/' + img.floor);
 
     let x = 2;
     let y = 3;
@@ -31,7 +37,10 @@ async function generatePdf(img, frontWall, sideWall, bath, shelf, floor) {
     doc.addImage(headerImg, 'png', x, y, endX, 30);
 
     y += 33
-    doc.addImage(img, 'png', x + 35, y , 140, 130);
+    doc.addImage(wallImg, 'png', x + 35, y , 140, 130);
+    doc.addImage(bathImg, 'png', x + 35, y , 140, 130);
+    doc.addImage(shelfImg, 'png', x + 35, y , 140, 130);
+    doc.addImage(floorImg, 'png', x + 35, y , 140, 130);
 
     y += 138
 
@@ -86,7 +95,7 @@ async function generatePdf(img, frontWall, sideWall, bath, shelf, floor) {
     doc.text('tel', x + 107, y);
     doc.text('担当', x + 137, y);
 
-    doc.addImage(logoImg, 'png', 160, y - 5, 37, 20);
+    doc.addImage(logoImg, 'png', 160, y - 3, 37, 6);
 
     y += 10;
     doc.setFontSize(13);
@@ -98,11 +107,9 @@ async function generatePdf(img, frontWall, sideWall, bath, shelf, floor) {
 
     function addBullet(_x, _y, content) {
         doc.setFillColor(136, 136, 136);
-        doc.rect(_x, _y, 5, 5, 'F')
-
+        doc.rect(_x, _y, 5, 5, 'F');
         doc.setFontSize(15);
         doc.text(content, _x + 8, _y + 5);
-
         doc.setFontSize(11);
     }
 

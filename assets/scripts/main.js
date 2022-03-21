@@ -1,4 +1,5 @@
 $(function () {
+    window.jsPDF = window.jspdf.jsPDF;
 
     let firstClick = true;
 
@@ -21,6 +22,8 @@ $(function () {
     } else {
         $('.init').on('click', function () {
             $(this).removeClass('init').off('click');
+
+            $('#init_text').hide();
 
             $('.controller-container').removeClass('d-none').addClass('d-flex');
 
@@ -93,6 +96,31 @@ $(function () {
             }
         })
     });
+
+    $('#print_pdf').on('click', function () {
+        const wall = $('.wall.active').data('name').split(',');
+        const bath = $('.bath.active').data('name');
+        const shelf = $('.shelf.active').data('name');
+        const floor = $('.floor.active').data('name');
+        const wallImg = $('#wall_img').attr('src');
+        const bathImg = $('#bath_img').attr('src');
+        const shelfImg = $('#shelf_img').attr('src');
+        const floorImg = $('#floor_img').attr('src');
+
+        generatePdf(
+            {
+                'wall': wallImg,
+                'bath': bathImg,
+                'shelf': shelfImg,
+                'floor': floorImg
+            },
+            wall[0],
+            wall[wall.length - 1],
+            bath,
+            shelf,
+            floor
+        );
+    })
 
     function initUI() {
             optionWidth = $('#first_option').width();
